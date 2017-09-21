@@ -77,6 +77,12 @@ ol li,ol li a{
     font-size:14px;
     line-height:26px;
 }
+
+a {
+    color: #00C2CB;
+    text-decoration: none;
+}
+
 a:hover,
 a:focus{
     text-decoration:none;
