@@ -1,0 +1,69 @@
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        --c1: red;
+        --c2: blue;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        --c1: green;
+        --c2: purple;
+    }
+}
+
+@property --c1 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: red;
+}
+
+@property --c2 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: blue;
+}
+
+.gradient {
+    --c1: red;
+    --size: 90vw;
+    width: var(--size);
+    height: var(--size);
+    filter: blur(calc(var(--size) / 5));
+    background-image: linear-gradient(var(--c1), var(--c2));
+    animation: rotate 10s ease alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+@media (min-width: 720px) {
+    .gradient {
+        --size: 445px;
+    }
+}
+
+#links {
+    filter: grayscale(100%);
+}
+
+#stats {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 99;
+}
+
+@media print {
+
+    .no-print,
+    .no-print * {
+        display: none !important;
+    }
+}
+
+@media not print {
+
+    .print-only,
+    .print-only * {
+        display: none !important;
+    }
+}
