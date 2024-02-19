@@ -2202,10 +2202,6 @@ details.collapse summary::-webkit-details-marker {
   margin-right: 0.5rem;
 }
 
-.mb-20 {
-  margin-bottom: 5rem;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -2224,10 +2220,6 @@ details.collapse summary::-webkit-details-marker {
 
 .h-96 {
   height: 24rem;
-}
-
-.max-h-60 {
-  max-height: 15rem;
 }
 
 .min-h-screen {
@@ -2250,20 +2242,8 @@ details.collapse summary::-webkit-details-marker {
   width: 100%;
 }
 
-.w-24 {
-  width: 6rem;
-}
-
 .max-w-md {
   max-width: 28rem;
-}
-
-.max-w-60 {
-  max-width: 15rem;
-}
-
-.max-w-24 {
-  max-width: 6rem;
 }
 
 .flex-col {
@@ -2286,14 +2266,14 @@ details.collapse summary::-webkit-details-marker {
   border-radius: 0.25rem;
 }
 
-.bg-base-200 {
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
-}
-
 .bg-base-100 {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+}
+
+.bg-base-200 {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
 }
 
 .stroke-current {
