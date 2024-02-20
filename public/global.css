@@ -52,16 +52,20 @@
     z-index: 99;
 }
 
-@media print {
 
+@media print {
     .no-print,
     .no-print * {
         display: none !important;
     }
+
+    .collapse-content {
+        visibility: visible !important;
+        min-height: auto !important;
+    }
 }
 
 @media not print {
-
     .print-only,
     .print-only * {
         display: none !important;
