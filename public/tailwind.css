@@ -2246,6 +2246,14 @@ details.collapse summary::-webkit-details-marker {
   max-width: 28rem;
 }
 
+.max-w-80 {
+  max-width: 20rem;
+}
+
+.max-w-40 {
+  max-width: 10rem;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -2531,8 +2539,48 @@ details.collapse summary::-webkit-details-marker {
   }
 }
 
+@media (min-width: 1024px) {
+  .lg\:card-side {
+    align-items: stretch;
+    flex-direction: row;
+  }
+
+  .lg\:card-side :where(figure:first-child) {
+    overflow: hidden;
+    border-start-start-radius: inherit;
+    border-start-end-radius: unset;
+    border-end-start-radius: inherit;
+    border-end-end-radius: unset;
+  }
+
+  .lg\:card-side :where(figure:last-child) {
+    overflow: hidden;
+    border-start-start-radius: unset;
+    border-start-end-radius: inherit;
+    border-end-start-radius: unset;
+    border-end-end-radius: inherit;
+  }
+
+  .lg\:card-side figure > * {
+    max-width: unset;
+  }
+
+  :where(.lg\:card-side figure > *) {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:text-end {
     text-align: end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:max-w-40 {
+    max-width: 10rem;
   }
 }
